@@ -7,6 +7,7 @@ app.listen(port, () => console.log(`Listening on port ${port}...`));
 // create route handler
 app.get('/', (req, res) => {
     res.send('Hello World');
+    
 });
 // create route handler for comments
 app.get('/api/comments', (req, res) => {
