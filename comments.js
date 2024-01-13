@@ -1,76 +1,55 @@
-// create web server
+// create web server using express
 const express = require('express');
 const app = express();
-// create a route for the app
-app.get('/', function(req, res){
+// create server to listen on port 3000
+const port = 3000;
+app.listen(port, () => console.log(`Listening on port ${port}...`));
+// create route handler
+app.get('/', (req, res) => {
     res.send('Hello World');
 });
-// start server on port 3000
-app.listen(3000, function(){
-    console.log('Server is running on port 3000');
+// create route handler for comments
+app.get('/api/comments', (req, res) => {
+    res.send([1, 2, 3]);
 });
-
-// Path: comments.js
-// create web server
-const express = require('express');
-const app = express();
-// create a route for the app
-app.get('/', function(req, res){
-    res.send('Hello World');
+// create route handler for posts
+app.get('/api/posts/:year/:month', (req, res) => {
+    res.send(req.params);
 });
-// start server on port 3000
-app.listen(3000, function(){
-    console.log('Server is running on port 3000');
+// create route handler for query parameters
+app.get('/api/posts/:year/:month', (req, res) => {
+    res.send(req.query);
 });
-
-// Path: comments.js
-// create web server
-const express = require('express');
-const app = express();
-// create a route for the app
-app.get('/', function(req, res){
-    res.send('Hello World');
+// create route handler for a single post
+app.get('/api/posts/:id', (req, res) => {
+    res.send(req.params.id);
 });
-// start server on port 3000
-app.listen(3000, function(){
-    console.log('Server is running on port 3000');
+// create route handler for a single post
+app.get('/api/posts/:id', (req, res) => {
+    res.send(req.params.id);
 });
-
-// Path: comments.js
-// create web server
-const express = require('express');
-const app = express();
-// create a route for the app
-app.get('/', function(req, res){
-    res.send('Hello World');
+// create route handler for a single post
+app.get('/api/posts/:id', (req, res) => {
+    res.send(req.params.id);
 });
-// start server on port 3000
-app.listen(3000, function(){
-    console.log('Server is running on port 3000');
+// create route handler for a single post
+app.get('/api/posts/:id', (req, res) => {
+    res.send(req.params.id);
 });
-
-// Path: comments.js
-// create web server
-const express = require('express');
-const app = express();
-// create a route for the app
-app.get('/', function(req, res){
-    res.send('Hello World');
+// create route handler for a single post
+app.get('/api/posts/:id', (req, res) => {
+    res.send(req.params.id);
 });
-// start server on port 3000
-app.listen(3000, function(){
-    console.log('Server is running on port 3000');
+// create route handler for a single post
+app.get('/api/posts/:id', (req, res) => {
+    res.send(req.params.id);
 });
-
-// Path: comments.js
-// create web server
-const express = require('express');
-const app = express();
-// create a route for the app
-app.get('/', function(req, res){
-    res.send('Hello World');
+// create route handler for a single post
+app.get('/api/posts/:id', (req, res) => {
+    res.send(req.params.id);
 });
-// start server on port 3000
-app.listen(3000, function(){
-    console.log('Server is running on port 3000');
+// create route handler for a single post
+app.get('/api/posts/:id', (req, res) => {
+    res.send(req.params.id);
 });
+//# sourceMappingURL=comments.js.map
